@@ -1,0 +1,133 @@
+html{
+    box-sizing: border-box;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+}
+
+.mainContainer{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+//top half of the screen
+
+.top-top{
+    height: 50px;
+    background-color: aqua;
+    margin-bottom: 10px;
+}
+
+.top-middle{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.top-middle-divs{
+    background-color: green;
+    height: 100%;
+    margin-bottom: .5rem;
+}
+
+.top-bottom{
+    background-color: blue;
+    height: 50%;
+}
+
+.mainContent{
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-flow: column nowrap;
+}
+// bottom half of screen
+
+.bottom{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.bottom-left{
+    width: 50vw;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.bottom-right{
+    background-color: purple;
+    width: 50vw;
+    margin-top: .5rem;
+}
+
+.bottom-left-divs{
+    background-color: yellow;
+    height: 10vh;
+    margin: .5rem .5rem .25rem 0;
+}
+
+.bottom-bottom{
+    background-color: orange;
+    margin-top: .5rem;
+    height: 50px;
+}
+
+/*-----------------Media Queries----------------------*/
+
+@media screen and (min-width: 501px){
+    .top-middle{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .top-middle-divs{
+        width: 20%;
+        height: 50px;
+    }
+
+    .bottom-left{
+        flex-flow: row wrap;
+        width: 50vw;
+    }
+
+    .bottom-left-divs{
+        width: 23.4vw;
+        
+    }
+
+    .top-bottom{
+        height: 75%;
+    }
+}
+
+@media screen and (min-width: 801px){
+
+    .top-bottom{
+        width: 50vw;
+        height: 100vh;
+    }
+    .bottom{
+        flex-flow: column wrap;
+    }
+
+    .mainContent{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .bottom-left{
+        margin-left: 10px;
+    }
+
+    .bottom-right{
+        display: flex;
+        height: 64vh;
+        margin-left: 10px;
+        margin-right: 40px;
+    }
+
+}
